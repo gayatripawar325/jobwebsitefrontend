@@ -1,0 +1,42 @@
+<div class="view">
+    <div class="container">
+        <h1 class="text-center">User Profile</h1>
+        <br>
+        <br>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id </th>
+                    <th>Name</th>
+                    <th>Address </th>
+                    <th>Phone </th>
+                    <th>Email</th>
+                    <th>Qualification</th>
+                    <th>Workexperience</th>
+                    <th>Skill</th>
+                    <th>Gender</th>
+
+
+
+                </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let r of prrr"> 
+                <td>{{r.id}}</td>
+                <td>{{r.name}}</td>
+                <td>{{r.address}}</td>
+                <td>{{r.phone}}</td>
+
+                <td>{{r.email}}</td>
+                <td>{{r.qualification}}</td>
+                <td>{{r.workexperience}}</td>
+                <td>{{r.skill}}</td>
+                <td>{{r.gender}}</td>
+
+            </tr>
+                
+            </tbody>
+        </table>
+        </div>
+    </div>
+    

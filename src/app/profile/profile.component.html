@@ -1,0 +1,66 @@
+<div class="prof">
+  <div class="container">
+    <h2><b>Profile Creation</b></h2>
+    <form (ngSubmit)="submitdata()" #profileForm="ngForm">
+
+      <!-- Full Name -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required [(ngModel)]="p.name" #name="ngModel">
+      <div *ngIf="name.invalid && name.touched" class="error" style="color: red;">Name is required.</div>
+
+      <!-- Address -->
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required [(ngModel)]="p.address" #address="ngModel">
+      <div *ngIf="address.invalid && address.touched" class="error" style="color: red;">Address is required.</div>
+
+      <!-- Phone Number -->
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required pattern="^[0-9]{10}$" [(ngModel)]="p.phone" #phone="ngModel">
+      <div *ngIf="phone.invalid && phone.touched" class="error" style="color: red;">
+        Phone number must be 10 digits.
+      </div>
+
+      <!-- Email -->
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required [(ngModel)]="p.email" #email="ngModel">
+      <div *ngIf="email.invalid && email.touched" class="error" style="color: red;">Valid email is required.</div>
+
+      <!-- Qualification -->
+      <label for="qualification">Qualification:</label>
+      <select id="qualification" name="qualification" required [(ngModel)]="p.qualification" #qualification="ngModel">
+        <option value="">Select</option>
+        <option value="BCA">BCA</option>
+        <option value="MCA">MCA</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="M.Tech">M.Tech</option>
+        <option value="other">Other</option>
+      </select>
+      <div *ngIf="qualification.invalid && qualification.touched" class="error" style="color: red;">Qualification is required.</div>
+
+      <!-- Experience -->
+      <label for="experience">Work Experience (Years):</label>
+      <input type="number" id="experience" name="experience" min="0" required [(ngModel)]="p.workexperience" #experience="ngModel">
+      <div *ngIf="experience.invalid && experience.touched" class="error" style="color: red;">Experience is required.</div>
+
+      <!-- Skills -->
+      <label for="skills">Skills:</label>
+      <input type="text" id="skills" name="skills" required [(ngModel)]="p.skill" #skill="ngModel">
+      <div *ngIf="skill.invalid && skill.touched" class="error" style="color: red;">Please enter at least one skill.</div>
+
+      <!-- Gender -->
+      <label>Gender:</label><br>
+      <label>
+        <input type="radio" name="gender" value="Male" required [(ngModel)]="p.gender" #gender="ngModel"> Male
+      </label>
+      <label>
+        <input type="radio" name="gender" value="Female" required [(ngModel)]="p.gender"> Female
+      </label>
+      <div *ngIf="gender.invalid && gender.touched" class="error" style="color: red;">Please select gender.</div>
+      <br><br>
+
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="profileForm.invalid">Create Profile</button>
+
+    </form>
+  </div>
+</div>

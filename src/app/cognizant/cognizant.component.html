@@ -1,0 +1,27 @@
+<div class="cogn">
+    
+    
+
+    <div class="job-card" *ngFor="let a of ads">
+        <div class="job-header">
+            <h2>{{a.title}}</h2>
+            <br>
+            <h3>Cognizant</h3>
+        </div>
+        <div class="job-details">
+            <p><strong>Location:</strong>{{a.location}}</p>
+            <br>
+            <p><strong>Job Type:</strong> {{a.type}}</p>
+            <br>
+        </div>
+        <button class="apply-btn"><a routerLink="/upload" >Apply Now</a></button>
+    </div>
+
+  
+    
+    
+    </div>
+
+
+
+

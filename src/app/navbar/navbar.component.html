@@ -1,0 +1,85 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid" [ngSwitch]="usertype">
+    <a class="navbar-brand" href="#">
+      <img src="bg15.webp" alt="Logo" style="width:45px ;height: 45px;" class="rounded-pill"> 
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav" *ngSwitchCase="'guest'">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" style="color: rgb(250, 248, 247);">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" style="color: rgb(250, 248, 247);">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" style="color: rgb(250, 248, 247);">Contact</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/sign" style="color: rgb(250, 248, 247);">Sign Up</a>
+        </li>  
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink="/login" style="color: rgb(250, 248, 247);" role="button" data-bs-toggle="dropdown" >Login</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/user">User</a></li>
+            <li><a class="dropdown-item" routerLink="/admin">Admin</a></li>
+            
+          </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav" *ngSwitchCase="'user'">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/homej" style="color: rgb(250, 248, 247);">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/profile" style="color: rgb(250, 248, 247);">Profile creation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/applyjob" style="color: rgb(250, 248, 247);">Apply job</a>
+
+          </li>  
+        
+          
+          <li class="nav-item">
+            <a class="nav-link" (click)="ulogout()" style="color: rgb(250, 248, 247);">Logout</a>
+          </li> 
+            </ul>
+
+            <ul class="navbar-nav" *ngSwitchCase="'admin'">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/homea"style="color: rgb(250, 248, 247);">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/vreg"style="color: rgb(250, 248, 247);">View Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/vpro"style="color: rgb(250, 248, 247);">View User</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/vcot"style="color: rgb(250, 248, 247);">View Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/vres"style="color: rgb(250, 248, 247);">View Resume</a>
+              </li>       
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="/homea" style="color: rgb(250, 248, 247);" role="button" data-bs-toggle="dropdown">Manage User</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/managejob">Manage Job</a></li>
+               
+              
+                 </ul>
+            </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="alogout()" style="color: rgb(250, 248, 247);">LogOut</a>
+        </li>
+        </ul>
+      </div>
+  </div>
+</nav>
+
+
+

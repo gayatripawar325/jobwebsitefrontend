@@ -1,0 +1,12 @@
+.view
+{
+    background-image: url('/wi.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+     background-color: #f4f4f4;
+     text-align: center;
+     
+     height:100vh;
+     padding: 200px;
+   
+}

@@ -1,0 +1,34 @@
+
+   .sect{ background-color: #f4f4f4; padding: 50px;
+       background-image: url('/ab1.avif');
+        background-size: cover;
+       margin-top: 60px;
+       background-repeat: no-repeat;
+       
+ }
+
+  .nav-item
+   {
+    font-size:larger;
+   }
+  .about-us-section {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+   
+    padding: 3px;
+
+  }
+  .about-us-image {
+    max-width: 100%;
+    border-radius: 10px;
+    font-size: large;
+  }
+  .mb-4{
+    font-size: 50px;
+  }
+   .row
+   {
+    justify-content:flex-start;
+   }
+   
+  

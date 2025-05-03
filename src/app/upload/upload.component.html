@@ -1,0 +1,34 @@
+
+
+<div class="upload-container">
+  <div class="container-fluid">
+   
+ <form (ngSubmit)="onSubmit()"  method="post" >
+  <br>
+  <h3> <b>Upload Resume</b></h3>
+  <br>
+     <div class="form-group">
+        
+         <input type="file" class="form-control" id="pass" required multiple value="select"
+         (change)="onFileSelected($event)">
+         <div class="row">
+             <div *ngFor="let file of resume.resumeImages; let i = index" class="col-sm-2">
+                 <span class="close" (click)="removeImage(i)">X</span>
+                 <img [src]="file.url" alt="" width="100px" height="70px">
+
+             </div>
+         </div>
+     </div>
+     <br>
+     <button class="apply-btn" type="submit" style="align-content: center;">Submit</button>
+     <br>
+     <br>
+     <br>
+    <button class="apply-btn"><a routerLink="/homej" >Back to home</a></button>
+ </form>
+</div>
+  </div>
+  
+
+
+

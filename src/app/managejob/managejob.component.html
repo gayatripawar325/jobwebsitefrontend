@@ -1,0 +1,56 @@
+
+
+<div class="mag">
+
+<div class="container">
+<h2>Add New Job</h2>
+
+<form  class=" "(ngSubmit)="submitdata()">
+    <div class="form-group">
+        <label for="title">Job Title:</label>
+        <input type="text" id="title" name="title" required name="ti"  [(ngModel)]="a.title">
+    </div>
+
+    <div class="form-group">
+        <label for="company">Company Name:</label>
+        <select id="text" name="company" name="comnm"  [(ngModel)]="a.companyname" >
+            <option value="Cognizant">Cognizant</option>
+            <option value="Capgemini">Capgemini</option>
+            <option value="Infosys">Infosys</option>
+            <option value="Wipro">Wipro</option>
+            <option value="Accenture">Accenture</option>
+            <option value="TCS">TCS</option>
+
+
+
+
+
+        </select>
+       
+    </div>
+
+    <div class="form-group">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required name="loc" [(ngModel)]="a.location">
+    </div>
+
+    <div class="form-group">
+        <label for="salary">Salary:</label>
+        <input type="text" id="salary" name="salary" name="sal"  [(ngModel)]="a.salary">
+    </div>
+
+    <div class="form-group">
+        <label for="job_type">Job Type:</label >
+        <select id="job_type" name="job_type" name="type"  [(ngModel)]="a.type" >
+            <option value="full-time">Full-Time</option>
+            <option value="part-time">Part-Time</option>
+
+        </select>
+    </div>
+
+    
+
+    <button type="submit" class="btn">Post Job</button>
+</form>
+</div>
+</div>

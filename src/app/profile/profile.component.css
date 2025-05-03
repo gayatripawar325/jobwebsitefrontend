@@ -1,0 +1,92 @@
+.navbar
+    {
+     padding:8px;
+     padding-left: 30px;
+     position: fixed;
+     top:0px;
+     left: 0px;
+     width: 100%;
+     z-index: 1;
+    }
+
+.prof {
+
+    background-image: url('/pr1.jpg');
+    color: rgb(71, 74, 74);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f4f4f4;
+    margin-top: 40px;
+    object-fit: cover;
+    display: flex;
+     padding: 0;
+      display: flex;
+      overflow: hidden;
+            
+            
+             
+       
+ }
+ 
+ .container {
+     width: 30%;
+     max-width: 35%;
+     margin: 60px auto;
+     color: rgb(193, 212, 212);
+     opacity: 0.7;
+     background: rgb(58, 53, 53);
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0px 0px 10px rgba(245, 236, 236, 0.1);
+ }
+ .nav-item
+      {
+       font-size:larger;
+      }
+ 
+ h2 {
+     text-align: center;
+     color: #333;
+ }
+ 
+ form {
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ label {
+     font-weight: bold;
+     margin-top: 2px;
+ }
+ 
+ input, select {
+     padding: 10px;
+     margin-top: 3px;
+     border: 1px solid #ede0e0;
+     border-radius: 5px;
+     font-size: 12px;
+ }
+ 
+ button {
+   background: #ab109e;
+             color: white;
+             border: none;
+             padding: 10px 15px;
+           display: flex;
+           margin: 0 auto;
+          align-items: center;
+         
+             
+             cursor: pointer;
+             justify-content: center;
+             width: 40%;
+             border-radius: 5px;}
+ 
+ button:hover {
+   background: #0056b3;
+ }
+ h2{
+   text-align: center;
+   color: azure;
+ }

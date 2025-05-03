@@ -1,0 +1,23 @@
+<div class="view">
+  <div class="container">
+      <h1 class="text-center">Resumes</h1>
+      <br>
+      <br>
+      <table class="table table-bordered">
+          <thead>
+              <tr>
+                  <th>Id </th>
+                  <th>Resume</th>
+              </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let u of urrr"> 
+              <td>{{u.id}}</td>
+              <td><a href="http://localhost:9000/project/downloadFile/{{u.resumeImages[0].name}}">{{u.resumeImages[0].name}}</a></td>
+    
+          </tr>
+              
+          </tbody>
+      </table>
+      </div>
+  </div>

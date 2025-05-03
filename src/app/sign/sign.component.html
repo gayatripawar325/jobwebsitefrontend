@@ -1,0 +1,101 @@
+
+
+<div class="sig">
+  <div class="signup-container">
+    <h2><b>Sign Up</b></h2>
+
+    <form #regForm="ngForm" (ngSubmit)="submitdata(regForm)" >
+
+      <!-- Username -->
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter username"
+        required
+        [(ngModel)]="r.username"
+        #username="ngModel"
+      />
+      <div *ngIf="username.invalid && username.touched" style="color:red">
+        Username is required
+      </div>
+
+      <!-- Email -->
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+        required
+        email
+        [(ngModel)]="r.email"
+        #email="ngModel"
+      />
+      <div *ngIf="email.invalid && email.touched" style="color:red">
+        <div *ngIf="email.errors?.['required']">Email is required</div>
+        <div *ngIf="email.errors?.['email']">Invalid email format</div>
+      </div>
+
+      <!-- Phone Number -->
+      <label for="phoneno"><b>Phone No</b></label>
+      <input
+        type="text"
+        id="phoneno"
+        name="phoneno"
+        placeholder="Enter phone no"
+        required
+        pattern="^[0-9]{10}$"
+        [(ngModel)]="r.phoneno"
+        #phoneno="ngModel"
+      />
+      <div *ngIf="phoneno.invalid && phoneno.touched" style="color:red">
+        <div *ngIf="phoneno.errors?.['required']">Phone number is required</div>
+        <div *ngIf="phoneno.errors?.['pattern']">Phone number must be 10 digits</div>
+      </div>
+
+      <!-- Password -->
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+        required
+        minlength="6"
+        [(ngModel)]="r.password"
+        #password="ngModel"
+      />
+      <div *ngIf="password.invalid && password.touched" style="color:red">
+        <div *ngIf="password.errors?.['required']">Password is required</div>
+        <div *ngIf="password.errors?.['minlength']">Password must be at least 6 characters</div>
+      </div>
+
+      <!-- Confirm Password -->
+      <label for="confirmpassword">Confirm Password</label>
+      <input
+        type="password"
+        id="confirmpassword"
+        name="confirmpassword"
+        placeholder="Confirm password"
+        required
+        [(ngModel)]="r.confirmpassword"
+        #confirmpassword="ngModel"
+      />
+      <div *ngIf="confirmpassword.invalid && confirmpassword.touched" style="color:red">
+        Confirm password is required
+      </div>
+
+      <!-- Custom Password Match Validation -->
+      <div *ngIf="r.password && r.confirmpassword && r.password !== r.confirmpassword" style="color:red">
+        Passwords do not match
+      </div>
+
+      <br /><br />
+      <button type="submit" [disabled]="!regForm.valid" >
+        Sign Up
+      </button>
+    </form>
+  </div>
+</div>
