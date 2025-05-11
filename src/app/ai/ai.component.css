@@ -1,0 +1,74 @@
+.aii{
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    background-image: url('/aei.avif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.job-card {
+    background: rgb(255, 252, 254);
+    padding: 20px;
+    height: 600px;
+    opacity: 0.9;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    row-gap: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.job-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.job-header p {
+    color: #777;
+    font-size: 14px;
+}
+
+.job-details {
+    margin: 15px 0;
+}
+
+.job-details p {
+    margin: 5px 0;
+    font-size: 25px;
+    color: #444;
+}
+h2{
+    font-size:30px;
+}
+h3{
+    font-size:25px;
+}
+.apply-btn {
+    
+    background: rgb(72, 72, 216);
+    color: rgb(251, 245, 245);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 20px;
+}
+
+.apply-btn:hover {
+    background-color: #0056b3;
+}
+a:visited{
+    color: azure;
+    text-decoration: none;
+}

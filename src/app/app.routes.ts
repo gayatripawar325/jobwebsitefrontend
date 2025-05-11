@@ -16,7 +16,6 @@ import { InfosysComponent } from './infosys/infosys.component';
 import { WiproComponent } from './wipro/wipro.component';
 import { TcsComponent } from './tcs/tcs.component';
 import { AccentureComponent } from './accenture/accenture.component';
-
 import { TestComponentRenderer } from '@angular/core/testing';
 
 import { UploadComponent } from './upload/upload.component';
@@ -28,6 +27,7 @@ import { ViewregisterComponent } from './viewregister/viewregister.component';
 import { ViewuserComponent } from './viewuser/viewuser.component';
 import { ViewcontactComponent } from './viewcontact/viewcontact.component';
 import { ViewresumeComponent } from './viewresume/viewresume.component';
+import { AiComponent } from './ai/ai.component';
 
 
 export const routes: Routes = [
@@ -43,7 +43,6 @@ export const routes: Routes = [
     {path:'vpro',component:ViewuserComponent},
     {path:'profile',component:ProfileComponent},
     {path:'applyjob',component:ApplyjobComponent},
-   
     {path:'logout',component:LogoutComponent},
     {path:'cognizant',component:CognizantComponent},
     {path:'capgemini',component:CapgeminiComponent},
@@ -56,6 +55,8 @@ export const routes: Routes = [
     {path:'managejob',component:ManagejobComponent},
     {path:'viewapplication',component:ViewapplicationComponent},
     {path:'vcot',component:ViewcontactComponent},
+    {path:'vcot',component:AiComponent},
+    
     
     
 
